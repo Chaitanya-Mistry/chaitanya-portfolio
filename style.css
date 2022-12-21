@@ -18,7 +18,7 @@ body {
 }
 
 /* Header */
-header {   
+header {
     height: 55px;
     padding: 0px 17px;
     padding-left: 50px;
@@ -28,7 +28,7 @@ header {
     font-weight: bold;
     letter-spacing: .7px;
     color: black;
-    border-bottom: .5px solid rgb(223, 223, 223);
+    border-bottom: .7px solid rgb(210, 210, 210);
 }
 
 #siteLogo {}
@@ -44,34 +44,42 @@ nav {
 header a,
 nav a {
     color: rgb(1, 1, 104);
-    /* gap: 200px; */
     text-decoration: none;
+    transition-property: all;
+    transition-duration: .2s;
+    transition-timing-function: linear;
+}
+
+nav a:hover {
+    color: rgb(6, 6, 198);
 }
 
 /* Main */
-main{
-   /* overflow-y: auto; */
+main {
+    /* overflow-y: auto; */
 }
 
 /* Banner */
-#bannerContainer{
+#bannerContainer {
     height: 100%;
-    /* border: 2px solid red;/\ */
-    /* padding: 17px; */
+    /* border: 2px solid red;     */
     display: flex;
+    flex-wrap: wrap;
 }
-#bannerDetailsContainer{
+
+#bannerDetailsContainer {
     padding-top: 90px;
     padding-left: 50px;
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
     font-size: 53px;
     font-weight: bold;
-    width: 45%;    
+    width: 45%;
     height: 80%;
     /* border: 2px solid dodgerblue; */
 }
-#hireBtn{
+
+#hireBtn {
     cursor: pointer;
     color: white;
     font-weight: bold;
@@ -80,29 +88,159 @@ main{
     font-size: 17.7px;
     border: none;
     border-radius: 27px;
-    background-color: rgb(147, 42, 233);
+    background-color: rgb(134, 32, 217);
     margin-top: 77px;
-    width: 30%;
+    width: 37%;
     padding: 13px;
+    transition-property: all;
+    transition-duration: .2s;
+    transition-timing-function: linear;
 }
-#bannerProfileImageContainer{
+
+#hireBtn:hover {
+    background-color: rgb(110, 17, 185);
+}
+
+#bannerProfileImageContainer {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    padding-right: 80px;
     align-items: center;
     /* border:2px solid red; */
     height: 80%;
     width: 55%
 }
 
+/* socialMediaContainer */
+#socialMediaContainer {
+    align-self: flex-end;
+    font-size: 37px;
+    margin: 60px 45px;
+    width: 45%;
+}
+
+#socialMediaContainer a {
+    opacity: .7;
+    display: inline-block;
+    text-decoration: none;
+    margin: 0px 19px;
+    transition-property: all;
+    transition-duration: .2s;
+    transition-timing-function: linear;
+}
+
+#socialMediaContainer a:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
 /* Footer */
 footer {
-    border: .5px solid rgb(223, 223, 223);
+    font-weight: bold;
+    color: rgb(106, 106, 106);
+    border-top: .7px solid rgb(210, 210, 210);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 55px;
-    text-align: center;    
-    width: 100%;    
+    text-align: center;
+    width: 100%;
     letter-spacing: .7px;
     word-spacing: .7px;
+}
+
+/* Responsive site designing goes here */
+@media screen and (max-width:800px) {
+    body {
+        /* background-color: rgb(255, 100, 100); */
+    }
+
+    #bannerDetailsContainer {
+        font-size: 43px;
+        font-weight: bold;
+        width: 40%;
+        height: 80%;
+        /* border: 2px solid dodgerblue; */
+    }
+
+    #hireBtn {        
+        font-size: 21px;     
+        margin-top: 77px;
+        width: 80%;
+    }  
+
+    #bannerProfileImageContainer {
+        /* display: flex;  */
+        /* justify-content: flex-end; */
+        padding-right: 12px;
+        align-items: center;
+        /* border:2px solid red; */
+        height: 80%;
+        width: 60%
+    }
+    #bannerProfileImageContainer img{
+        width: 290px;
+    }
+
+    /* socialMediaContainer */
+    #socialMediaContainer {
+        align-self: flex-end;
+        font-size: 37px;
+        margin: 60px 45px;
+        width: 45%;
+    }
+}
+
+@media screen and (max-width:634px){
+    /* Banner */  
+    #bannerContainer {
+        /* background-color: aqua; */
+        flex-direction: column-reverse;        
+        justify-content: center;
+        align-items: center;        
+    }
+       
+    #bannerDetailsContainer {        
+        justify-content: center;            
+        font-size: 30px;       
+        width: 100%;
+        height: fit-content;     
+        margin-top: 300px;          
+    }
+
+    #hireBtn {                
+        font-size: 21px;     
+        margin: 70px 20px;
+        width: 70%;
+    }  
+
+    #bannerProfileImageContainer {
+        display: flex;         
+        justify-content: center;
+        padding-right: 12px;
+        align-items: center;
+        /* border:2px solid red; */
+        height: fit-content;
+        width: 100%;       
+        position: absolute; 
+        top: 55px;
+    }
+    #bannerProfileImageContainer img{
+        width: 270px;
+    }
+
+    /* socialMediaContainer */
+    #socialMediaContainer {       
+        align-self: flex-start;
+        position: absolute;
+        display: inline;
+        top: 25px;
+        gap: 40px;
+        left: -40px;
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        font-size: 25px;
+        /* border: 2px solid red;           */
+    }
 }
