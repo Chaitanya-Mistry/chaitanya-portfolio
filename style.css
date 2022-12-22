@@ -3,9 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 :root {
     --blackBg: rgb(50, 50, 50);
+    --textColor : rgb(134, 32, 217);
 }
 
 body {
@@ -58,10 +62,13 @@ nav a:hover {
 main {
     /* overflow-y: auto; */
 }
-
+.divTitle{
+    text-align: center;
+    color: var(--textColor);        
+}
 /* Banner */
 #bannerContainer {
-    height: 100%;
+    height: 92vh;
     /* border: 2px solid red;     */
     display: flex;
     flex-wrap: wrap;
@@ -75,7 +82,7 @@ main {
     font-size: 53px;
     font-weight: bold;
     width: 45%;
-    height: 80%;
+    height: fit-content;
     /* border: 2px solid dodgerblue; */
 }
 
@@ -112,11 +119,10 @@ main {
 }
 
 /* socialMediaContainer */
-#socialMediaContainer {
-    align-self: flex-end;
+#socialMediaContainer {            
     font-size: 37px;
-    margin: 60px 45px;
-    width: 45%;
+    margin: 100px -5px;
+    width: 100%;
 }
 
 #socialMediaContainer a {
@@ -134,6 +140,56 @@ main {
     transform: scale(1.2);
 }
 
+/* Skills 🔥 */
+#skillsContainer{
+    margin: 50px 0px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;    
+    gap: 10px;
+}
+.individualSkills{
+    /* background-color: rgb(246, 246, 246); */
+    background-color: rgb(45, 45, 45);
+    width: 31%;
+    height: 300px;
+    /* border: 1px solid rgb(211, 211, 211); */
+    text-align: center;
+}
+.individualSkills span{
+    color: var(--textColor);
+    color: rgb(196, 86, 255);
+    display: inline-block;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 10px 0px;
+}
+.individualSkills .skillLists{    
+    list-style-type: "\2B50";
+    color: rgb(76, 76, 76);
+    color: white;
+    font-weight: bold;
+    font-size: 17.7px;
+    text-align: justify;
+    letter-spacing: 1px;        
+    /* border-top: 2px solid red; */
+    width: fit-content;
+    margin: auto;
+    margin-top: 20px;
+}
+.individualSkills:last-of-type{
+    width: 50%;
+}
+.skillImageContainer{
+    padding-top: 10px;
+    /* border-bottom: 1px solid red; */
+    display: flex;
+    justify-content: center;
+}
+.individualSkills img{        
+    /* border: 2px solid red; */
+}
 /* Footer */
 footer {
     font-weight: bold;
