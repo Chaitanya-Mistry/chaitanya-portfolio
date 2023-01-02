@@ -5,6 +5,7 @@
 }
 html{
     scroll-behavior: smooth;
+    font-size: 19px;
 }
 
 :root {
@@ -22,41 +23,17 @@ body {
 }
 
 /* Header */
-header {
-    height: 55px;
-    padding: 0px 17px;
-    padding-left: 50px;
-    display: flex;
-    font-size: 19px;
-    align-items: center;
+/* header {
+    font-size: 19px;    
     font-weight: bold;
-    letter-spacing: .7px;
-    color: black;
+    letter-spacing: .7px;    
     border-bottom: .7px solid rgb(210, 210, 210);
+} */
+header{
+    z-index: 99;
 }
 
 #siteLogo {}
-
-nav {
-    position: absolute;
-    right: 10px;
-    width: 70%;
-    display: flex;
-    justify-content: space-around;
-}
-
-header a,
-nav a {
-    color: rgb(1, 1, 104);
-    text-decoration: none;
-    transition-property: all;
-    transition-duration: .2s;
-    transition-timing-function: linear;
-}
-
-nav a:hover {
-    color: rgb(6, 6, 198);
-}
 
 /* Main */
 main {
@@ -110,10 +87,13 @@ main {
 
 #hireBtn:hover,.visitSiteBtn:hover {
     background-color: rgb(110, 17, 185);
+    color: white;
+    text-decoration: none;
 }
 .visitSiteBtn{
     margin: 17px;
     font-size: 16.1px;
+    text-decoration: none;
 }
 
 #bannerProfileImageContainer {
@@ -230,6 +210,10 @@ footer {
 
 /* Responsive site designing goes here */
 @media screen and (max-width:800px) {
+    html{
+        font-size: 23px;
+    }
+    
     body {
         /* background-color: rgb(255, 100, 100); */
     }
