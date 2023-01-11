@@ -22,33 +22,18 @@ body {
     overflow-x: hidden;
 }
 
-/* Header */
-/* header {
-    font-size: 19px;    
-    font-weight: bold;
-    letter-spacing: .7px;    
-    border-bottom: .7px solid rgb(210, 210, 210);
-} */
 header{
     z-index: 99;
 }
 
-#siteLogo {}
-
-/* Main */
-main {
-
-}
 .divTitle{
     text-align: center;
     color: var(--textColor);        
 }
 /* Banner */
 #bannerContainer {
-    height: 92vh;
-    /* border: 2px solid red; */
+    height: 92vh;    
     height: auto;
-    /* overflow: hidden; */
     display: flex;
     flex-wrap: wrap;
 }
@@ -101,7 +86,7 @@ main {
     justify-content: flex-end;
     padding-right: 80px;
     align-items: center;
-    /* border:2px solid red; */
+    margin-top: 90px;
     height: 80%;
     width: 55%
 }
@@ -131,6 +116,7 @@ main {
 
 /* Skills && Projects 🔥 */
 #skillsContainer,#projectsContainer{
+    flex-wrap: wrap;
     padding: 30px;
     margin: 10px 0px;
     display: flex;
@@ -209,15 +195,10 @@ footer {
 }
 
 /* Responsive site designing goes here */
-@media screen and (max-width:800px) {
+@media screen and (max-width:820px) {
     html{
         font-size: 23px;
     }
-    
-    body {
-        /* background-color: rgb(255, 100, 100); */
-    }
-
     #bannerDetailsContainer {
         font-size: 43px;
         font-weight: bold;
@@ -232,12 +213,9 @@ footer {
         width: 80%;
     }  
 
-    #bannerProfileImageContainer {
-        /* display: flex;  */
-        /* justify-content: flex-end; */
+    #bannerProfileImageContainer {       
         padding-right: 12px;
-        align-items: center;
-        /* border:2px solid red; */
+        align-items: center;        
         height: 80%;
         width: 60%
     }
@@ -249,15 +227,42 @@ footer {
     #socialMediaContainer {
         align-self: flex-end;
         font-size: 37px;
-        margin: 60px 45px;
-        width: 45%;
+        margin: 60px 13px;
+        width: 100%;
+    }
+
+    /* Skills Container & Project Container */   
+    #skillsContainer{
+        /* border: 2px solid red;         */
+    }
+    .individualSkills,.individualProjects{                
+        width:100%!important;
+        height: 450px;       
+        margin: 10px auto;
+    }
+    .individualSkills:last-child{
+        margin: 10px auto;   
+    }
+    .individualSkills span,.skillLists li, .individualProjects span, .projectDescription li{
+        font-size: 27px;
+    }    
+    .individualSkills .skillImageContainer, .individualProjects .projectImageContainer{
+        width: fit-content;
+        height: 140px;        
+        margin: auto;
+    }   
+    .skillImageContainer img, .projectImageContainer img{
+        object-fit: contain;
+        width: 100%;
     }
 }
 
 @media screen and (max-width:634px){
-    /* Banner */  
+    html{
+        font-size: 14px;
+    }
+    /* Banner */   
     #bannerContainer {
-        /* background-color: aqua; */
         flex-direction: column-reverse;        
         justify-content: center;
         align-items: center;        
@@ -268,13 +273,16 @@ footer {
         font-size: 30px;       
         width: 100%;
         height: fit-content;     
-        margin-top: 300px;          
+        margin-top: 300px;        
     }
 
-    #hireBtn {                
+    .divTitle{
+        padding-left: 70px;
+    }
+    #hireBtn {
         font-size: 21px;     
-        margin: 70px 20px;
-        width: 70%;
+        margin: 70px 45px;
+        width: 75%;
     }  
 
     #bannerProfileImageContainer {
@@ -282,14 +290,14 @@ footer {
         justify-content: center;
         padding-right: 12px;
         align-items: center;
-        /* border:2px solid red; */
         height: fit-content;
         width: 100%;       
         position: absolute; 
-        top: 55px;
+        top: 10px;
+        left: 50px;
     }
     #bannerProfileImageContainer img{
-        width: 270px;
+        width: 270px;        
     }
 
     /* socialMediaContainer */
@@ -299,11 +307,41 @@ footer {
         display: inline;
         top: 25px;
         gap: 40px;
-        left: -40px;
+        left: -10px;
         display: flex;
         flex-direction: column;
         width: fit-content;
         font-size: 25px;
-        /* border: 2px solid red;           */
+    }
+
+    .individualSkills,.individualProjects{        
+        display: grid;
+        place-content: center;
+        place-items: center;
+        height:fit-content;
+        margin-left: 11px;
+        padding: 40px;
+    }
+    .individualSkills:last-child{
+        margin-left: 11px;
+    }
+    .individualSkills span,.individualProjects span{
+        font-size: 27px;
+    }    
+    .skillLists li,.projectDescription li{
+        font-size: 19px;
+    }
+    .individualProjects .projectImageContainer{
+        width: fit-content;
+        height: 110px;        
+        margin: auto;
+    }
+    .projectImageContainer img{
+        object-fit: cover;
+        width: 100%;
+    }
+    footer{        
+        /* background-color: rebeccapurple; */
+        font-size: 19px;
     }
 }
