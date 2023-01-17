@@ -115,7 +115,7 @@ header{
 }
 
 /* Skills && Projects 🔥 */
-#skillsContainer,#projectsContainer{
+#skillsContainer,#projectsContainer,#videosContainer{
     flex-wrap: wrap;
     padding: 30px;
     margin: 10px 0px;
@@ -265,15 +265,18 @@ footer {
     #bannerContainer {
         flex-direction: column-reverse;        
         justify-content: center;
-        align-items: center;        
+        align-items: center;
+        /* border: 2px solid red;         */
     }
        
     #bannerDetailsContainer {        
-        justify-content: center;            
+        justify-content: center;  
+        align-items: center;          
         font-size: 30px;       
         width: 100%;
         height: fit-content;     
-        margin-top: 300px;        
+        /* margin-top: 300px; */
+        /* border: 2px solid dodgerblue;         */
     }
 
     .divTitle{
@@ -292,12 +295,13 @@ footer {
         align-items: center;
         height: fit-content;
         width: 100%;       
-        position: absolute; 
-        top: 10px;
-        left: 50px;
+        /* position: absolute;  */
+        /* top: 10px; */
+        /* left: 50px; */
+        /* border: 3px solid purple; */
     }
     #bannerProfileImageContainer img{
-        width: 270px;        
+        width: 277px;        
     }
 
     /* socialMediaContainer */
@@ -305,13 +309,13 @@ footer {
         align-self: flex-start;
         position: absolute;
         display: inline;
-        top: 25px;
+        top: 50px;
         gap: 40px;
-        left: -10px;
+        left: 10px;
         display: flex;
         flex-direction: column;
         width: fit-content;
-        font-size: 25px;
+        font-size: 35px;
     }
 
     .individualSkills,.individualProjects{        
@@ -320,16 +324,18 @@ footer {
         place-items: center;
         height:fit-content;
         margin-left: 11px;
-        padding: 40px;
+        padding: 10px;
     }
     .individualSkills:last-child{
         margin-left: 11px;
     }
     .individualSkills span,.individualProjects span{
         font-size: 27px;
-    }    
+    }        
     .skillLists li,.projectDescription li{
         font-size: 19px;
+        padding: none;               
+        width: 100%;
     }
     .individualProjects .projectImageContainer{
         width: fit-content;
@@ -342,6 +348,6 @@ footer {
     }
     footer{        
         /* background-color: rebeccapurple; */
-        font-size: 19px;
+        font-size: 14px;
     }
 }
